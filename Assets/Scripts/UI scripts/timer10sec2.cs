@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class timer10sec : MonoBehaviour
+public class timer10sec2 : MonoBehaviour
 {
     public TextMeshProUGUI zahlerText2;
     public float maxZähler2 = 10;
     public float zahler2; 
     public bool button_pressed2 = false;
-    public countAnzeige count2;
+    public countAnzeige2 count2;
     
 
 

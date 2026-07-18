@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class countAnzeige : MonoBehaviour
+public class countAnzeige2 : MonoBehaviour
 {
     public Slider slidertimer2; 
 
