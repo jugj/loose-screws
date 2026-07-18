@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83243bfd94fa85b4a92769893dcaf915
+guid: 5f6a593572ef5af458738db363d6e96a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,13 +97,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ButtonAnimation_0
+      name: ArrowTileMap_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 96
-        height: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -111,20 +111,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d67f615d0010aa40b2245b3819451e0
-      internalID: 1827826901
+      spriteID: 6b91ade31ecd32d498829d5235d713d3
+      internalID: 695922369
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonAnimation_1
+      name: ArrowTileMap_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 96
-        width: 96
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -132,62 +132,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b24c1c2893a54d340ae0e42024b55054
-      internalID: 1065261412
+      spriteID: de9508d3975afa74aa551d6608b84560
+      internalID: -628332206
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ButtonAnimation_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 64
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ee63a856103d09349bbe420e4c690fcd
-      internalID: 624417070
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonAnimation_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 96
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 14877a5f5536d1e4d832e74cd86e497c
-      internalID: -101585476
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ButtonAnimation_4
+      name: ArrowTileMap_2
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 96
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -195,8 +153,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f68248679531784988e0d0738ace263
-      internalID: -2027246794
+      spriteID: 37a38aee52353d247af92ce1a2810139
+      internalID: 1456366883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ArrowTileMap_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1659acb5d13e84ea89a7eeeea2e9c5
+      internalID: -1520670007
       vertices: []
       indices: 
       edges: []
@@ -212,11 +191,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ButtonAnimation_0: 1827826901
-      ButtonAnimation_1: 1065261412
-      ButtonAnimation_2: 624417070
-      ButtonAnimation_3: -101585476
-      ButtonAnimation_4: -2027246794
+      ArrowTileMap_0: 695922369
+      ArrowTileMap_1: -628332206
+      ArrowTileMap_2: 1456366883
+      ArrowTileMap_3: -1520670007
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
