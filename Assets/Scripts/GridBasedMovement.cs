@@ -63,7 +63,7 @@ public class GridBasedMovement : MonoBehaviour
         }
         else
         {
-            if (enabledInput && (inputX !=0 || inputY !=0))
+            if (enabledInput && (inputX !=0 || inputY !=0) && (inputX != 0 || inputY != 0))
             {
                 movePosition = new Vector3(transform.position.x + inputX, transform.position.y + inputY, 0);
                 if (CanMove(movePosition, new Vector3(inputX, inputY, 0)))
@@ -97,7 +97,7 @@ public class GridBasedMovement : MonoBehaviour
             }
             else
             {
-                Debug.Log("hit");
+                
             }
         }
         return true;
@@ -107,11 +107,11 @@ public class GridBasedMovement : MonoBehaviour
     {
         if (isMoving)
         {
-            anim.SetTrigger("isMoving");
+            anim.SetBool("isMoving", true);
         }
         else
         {
-            return;
+            anim.SetBool("isMoving", false);
         }
     }
 }
