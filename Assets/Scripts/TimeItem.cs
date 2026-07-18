@@ -15,6 +15,8 @@ public class TimeItem : MonoBehaviour
 	[SerializeField] private ParticleSystem destroyEffect;
 	[SerializeField] private GameObject spriteRenderer;
 	[SerializeField] private Collider2D collider;
+	[SerializeField] private GameObject particle;
+	private Vector3 boundsMirror;
 
 
     private int gridX;
@@ -25,6 +27,7 @@ public class TimeItem : MonoBehaviour
     {
         Debug.Log(tilemap.cellBounds);
         BoundsInt bounds = tilemap.cellBounds;
+		boundsMirror = new Vector3(bounds.min.x, bounds.max.y, 0f);
         gridX = bounds.position.x;
         gridY = bounds.position.y;
 		Debug.Log(gridX);
@@ -80,13 +83,21 @@ public class TimeItem : MonoBehaviour
     Vector3 FindNewRandomPos()
     {
         Vector3 currentPos = transform.position;
-        while (!CanSpawn(newPos) || currentPos == newPos || newPos == Vector3.zero)
-        {
-           Debug.Log(newPos);
-           int x = Random.Range(-gridX, gridX);
-           int y = Random.Range(-gridY, gridY);
-           newPos = new Vector3(x+0.5f, y+0.5f, 0f);
-        }
+		Debug.Log(gridX*2);
+ 
+		while (!CanSpawn(newPos) || currentPos == newPos) 
+		{
+			float minX = Mathf.Min(boundsMirror.x, gridX);
+			float maxX = Mathf.Max(boundsMirror.x, gridX);
+			float minY = Mathf.Min(boundsMirror.y, gridY);
+			float maxY = Mathf.Max(boundsMirror.y, gridY);
+
+			float randomX = Random.Range(minX, maxX);
+			float randomY = Random.Range(minY, maxY);
+			float finalGridX = Mathf.Floor(randomX) + 0.5f;
+			float finalGridY = Mathf.Floor(randomY) + 0.5f;
+			newPos = new Vector3(finalGridX, finalGridY, 0f);
+		}
         return newPos;
 
 
@@ -109,5 +120,17 @@ public class TimeItem : MonoBehaviour
         }
         return true;
     }
-    
+    	
+	void archiev() 
+	{
+      for(float i = 0.5f;i>gridX; i-=1f) 
+			{
+				for(float j = 0.5f;j>gridX; j-=1f) 
+				{
+					newPos = new Vector3(i, j, 0f);
+					Instantiate(particle, newPos, Quaternion.identity);
+				}
+				
+			}
+	}
 }
