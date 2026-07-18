@@ -13,7 +13,7 @@ public class GridBasedMovement : MonoBehaviour
 
 
     private bool enabledInput = true;
-    private bool isMoving = false;
+    public bool isMoving = false;
 
     [SerializeField] private float speed;
     [SerializeField] private int isPlayer;
@@ -21,11 +21,12 @@ public class GridBasedMovement : MonoBehaviour
     [SerializeField] private string verticalAxis;
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private int steps;
+    [SerializeField] private Animator anim;
+
     
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -62,6 +63,7 @@ public class GridBasedMovement : MonoBehaviour
                 if (CanMove(movePosition, new Vector3(inputX, inputY, 0)))
                 {
                     isMoving = true;
+                    anim.SetTrigger("isMoving");
                 }
                 enabledInput = false;
             }
