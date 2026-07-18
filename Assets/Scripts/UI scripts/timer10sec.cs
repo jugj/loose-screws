@@ -9,6 +9,7 @@ public class timer10sec : MonoBehaviour
     public float maxZähler = 10;
     public float zahler; 
     public bool button_pressed = false;
+    public countAnzeige count1;
     
 
 
@@ -20,6 +21,7 @@ public class timer10sec : MonoBehaviour
     void Start()
     {
         zahler = maxZähler;
+        count1.SetzeMaxZeit(maxZähler);
     }
 
     // Update is called once per frame
@@ -34,5 +36,6 @@ public class timer10sec : MonoBehaviour
         else 
         {zahler = 0;}
         zahlerText.text =  Mathf.Round(zahler) + "";
+        count1.SetzeZeit(zahler);
     }
 }
