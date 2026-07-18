@@ -6,26 +6,33 @@ using TMPro;
 public class timer10sec : MonoBehaviour
 {
     public TextMeshProUGUI zahlerText;
-    int maxZähler = 10;
-    int zahler; 
-    public Zeit1 zeit1;
+    public float maxZähler = 10;
+    public float zahler; 
+    public bool button_pressed = false;
+    
 
 
     public void ButtonPressed(){
-        zahler = zahler - 1;
-        zahlerText.text = zahler + "";
-        zeit1.SetzeLeben(zahler);
+        button_pressed = true;
+        
     }
     // Start is called before the first frame update
     void Start()
     {
         zahler = maxZähler;
-        zeit1.SetzeMaxLeben(maxZähler);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (!(zahler <= 0)) {
+            if (button_pressed == true){
+            zahler = zahler - Time.deltaTime; 
+            
+            }
+        }
+        else 
+        {zahler = 0;}
+        zahlerText.text =  Mathf.Round(zahler) + "";
     }
 }
