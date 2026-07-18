@@ -31,7 +31,7 @@ public class GridBasedMovement : MonoBehaviour
         inputX = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal"));
         inputY = Mathf.RoundToInt(Input.GetAxisRaw("Vertical"));
         
-        //Hier wird geprüft ob runter gedrückt wurde.
+        //Hier wird geprüft ob runter gedrückt wurde...
         if (enabledInput && (inputX !=0 || inputY !=0))
         {
             movePosition = new Vector2(transform.position.x + inputX, transform.position.y + inputY);
