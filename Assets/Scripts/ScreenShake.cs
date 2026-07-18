@@ -22,7 +22,8 @@ public class ScreenShake : MonoBehaviour
         {
             if (player.isMoving)
             {
-                anim.SetTrigger("Shake");
+                Debug.Log("shake");
+                anim.SetTrigger("shake");
             }
         }
     }

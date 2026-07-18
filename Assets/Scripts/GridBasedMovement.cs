@@ -8,25 +8,32 @@ public class GridBasedMovement : MonoBehaviour
     
     private int inputX;
     private int inputY;
-    private int moveBufferX;
-    private int moveBufferY;
-
-
+    //private int moveBufferX;
+    //private int moveBufferY;
+    
     private bool enabledInput = true;
-    public bool isMoving = false;
-
+    
     [SerializeField] private float speed;
-    [SerializeField] private int isPlayer;
-    [SerializeField] private string horizontalAxis;
-    [SerializeField] private string verticalAxis;
+    [SerializeField] private int isPlayer; //Which Player...
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private int steps;
     [SerializeField] private Animator anim;
+    
+    public Transform spawnPoint;
+    public bool isMoving = false;
 
     
     // Start is called before the first frame update
     void Start()
     {
+        if (spawnPoint != null)
+        {
+            transform.position = spawnPoint.transform.position;
+        }
+        else
+        {
+            Debug.Log("Spawn Point is null");
+        }
     }
 
     // Update is called once per frame
@@ -35,10 +42,9 @@ public class GridBasedMovement : MonoBehaviour
         if (isPlayer == 0)
             return;
         
-        
         //Input
-        inputX = Mathf.RoundToInt(Input.GetAxisRaw(horizontalAxis));
-        inputY = Mathf.RoundToInt(Input.GetAxisRaw(verticalAxis));
+        inputX = Mathf.RoundToInt(Input.GetAxisRaw("Horizontal" + isPlayer));
+        inputY = Mathf.RoundToInt(Input.GetAxisRaw("Vertical" + isPlayer));
         
         //Bewegung mit Geschwindigkeit
         if (isMoving)
@@ -63,7 +69,6 @@ public class GridBasedMovement : MonoBehaviour
                 if (CanMove(movePosition, new Vector3(inputX, inputY, 0)))
                 {
                     isMoving = true;
-                    anim.SetTrigger("isMoving");
                 }
                 enabledInput = false;
             }
@@ -73,6 +78,8 @@ public class GridBasedMovement : MonoBehaviour
                 
             }
         }
+
+        AnimationForPlayer();
 
     }
 
@@ -94,5 +101,17 @@ public class GridBasedMovement : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public void AnimationForPlayer()
+    {
+        if (isMoving)
+        {
+            anim.SetTrigger("isMoving");
+        }
+        else
+        {
+            return;
+        }
     }
 }
