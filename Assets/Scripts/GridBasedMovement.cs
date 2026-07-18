@@ -79,7 +79,7 @@ public class GridBasedMovement : MonoBehaviour
         //Logik die prüft ob das Feld frei ist.
         for(int i = 1; i <= steps; i++)
         {
-            Vector3 checkPos = movePosition + (pMoveDirection * i);
+            Vector3 checkPos = transform.position + (pMoveDirection * i);
 
             Collider2D hit = Physics2D.OverlapCircle(checkPos, 0.2f, obstacleLayer);
             if (hit)
