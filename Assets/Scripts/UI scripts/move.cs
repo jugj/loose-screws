@@ -1,20 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class move : MonoBehaviour
+public class buttonDisapeared : MonoBehaviour
 {
 
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public Button Startbutton;
+
+private void disablebutton(){
+        Startbutton.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
