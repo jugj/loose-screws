@@ -11,6 +11,7 @@ public class timer10sec : MonoBehaviour
     public bool button_pressed = false;
     public countAnzeige count1;
     
+    public bool stop;
 
 
     public void ButtonPressed(){
@@ -28,6 +29,16 @@ public class timer10sec : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (stop)
+        {
+            return;
+        }
+
+        if (zahler > 10f)
+        {
+            zahler = 10f;
+        }
+
         if (!(zahler <= 0)) {
             if (button_pressed == true){
             zahler = zahler - Time.deltaTime; 
