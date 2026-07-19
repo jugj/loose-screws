@@ -10,6 +10,12 @@ public class SlowDownEnemyItem : MonoBehaviour
         
     }
 
+    public void ButtonPressedR(){
+        
+        //button_pressedR = true;
+        
+    }
+
     // Update is called once per frame
     void Update()
     {
