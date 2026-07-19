@@ -8,6 +8,7 @@ public class TimeItem : MonoBehaviour
 {
     // Start is called before the first frame update
     private bool collected;
+    public AudioSource collect;
     [SerializeField] private Animator anim;
     [SerializeField] private Tilemap tilemap;
 	[SerializeField] private ParticleSystem destroyEffect;
@@ -57,7 +58,7 @@ public class TimeItem : MonoBehaviour
         if (collision.gameObject.tag == "Player" && !collected)
         {
 			destroyEffect.Play();
-			//sound
+			collect.Play();
             collected = true;
 			spriteRenderer.SetActive(false);
 			collider.enabled = false;

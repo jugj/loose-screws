@@ -13,6 +13,7 @@ public class GridBasedMovement : MonoBehaviour
     
     private bool enabledInput = true;
     
+    public AudioSource jump;
     [SerializeField] private float speed;
     [SerializeField] public int isPlayer; //Which Player...
     [SerializeField] private LayerMask obstacleLayer;
@@ -74,6 +75,7 @@ public class GridBasedMovement : MonoBehaviour
                 if (CanMove(movePosition, new Vector3(inputX, inputY, 0)))
                 {
                     isMoving = true;
+                    jump.Play();
                 }
                 enabledInput = false;
             }

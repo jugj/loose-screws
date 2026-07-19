@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
+    public AudioSource death;
     public GridBasedMovement[] playerNumbers;
     public int winner;
 	private string spielStatus;
