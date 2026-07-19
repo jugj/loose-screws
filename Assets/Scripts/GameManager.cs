@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public GridBasedMovement[] playerNumbers;
     public int winner;
+	private string spielStatus;
     
     public static GameManager Instance { get;private set; }
     
