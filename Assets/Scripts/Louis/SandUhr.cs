@@ -5,7 +5,7 @@ using UnityEngine;
 public class SandUhr : MonoBehaviour
 {
     [SerializeField]  GameObject targetTimer;
-    public enum Time {EineSekunde , DreiSekunden};
+    public enum Time {EineSekunde,DreiSekunden};
     [SerializeField] private Time chosenTime;
     private CircleCollider2D CircleCollider2D;
     private SpriteRenderer SpriteRenderer;
