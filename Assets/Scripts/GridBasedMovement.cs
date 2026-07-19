@@ -14,10 +14,15 @@ public class GridBasedMovement : MonoBehaviour
     private bool enabledInput = true;
     
     [SerializeField] private float speed;
-    [SerializeField] private int isPlayer; //Which Player...
+    [SerializeField] public int isPlayer; //Which Player...
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private int steps;
     [SerializeField] private Animator anim;
+
+    [SerializeField]
+    public timer10sec timer;
+
+    public timer10sec2 timer2;
     
     public Transform spawnPoint;
     public bool isMoving = false;

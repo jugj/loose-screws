@@ -38,8 +38,16 @@ public class TimeItem : MonoBehaviour
     
     
     
-    void ChangeTime(GameObject player, float time)
+    void ChangeTime(GridBasedMovement player, float time)
     {
+		if(player.isPlayer == 1) 
+		{
+			player.timer.zahler += time;
+		}
+		else if  (player.isPlayer == 2) 
+		{
+			player.timer2.zahler2 += time;
+		}
         
     }
 
@@ -53,8 +61,9 @@ public class TimeItem : MonoBehaviour
             collected = true;
 			spriteRenderer.SetActive(false);
 			collider.enabled = false;
-            ChangeTime(collision.gameObject, 3f);
+            ChangeTime(collision.gameObject.GetComponent<GridBasedMovement>(), 3f);
             StartCoroutine(Respawn());
+			
         }
     }
 
