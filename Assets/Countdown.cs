@@ -45,6 +45,6 @@ public class Countdown : MonoBehaviour
     void OnTimerFinished()
     {
         // Hier kommt deine Aktion hin
-        Debug.Log("Timer hat 0 erreicht – wiederholen!");
+        
     }
 }
