@@ -14,7 +14,7 @@ public class GridBasedMovement : MonoBehaviour
     private bool enabledInput = true;
     
     public AudioSource jump;
-    [SerializeField] private float speed;
+    [SerializeField] public float speed;
     [SerializeField] public int isPlayer; //Which Player...
     [SerializeField] private LayerMask obstacleLayer;
     [SerializeField] private int steps;
