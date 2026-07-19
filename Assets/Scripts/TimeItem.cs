@@ -113,7 +113,7 @@ public class TimeItem : MonoBehaviour
     IEnumerator Respawn()
     {
         float timer = 0.0f;
-        float time = 1.5f;
+        float time = 1.0f;
         
         
         while (timer < time)
