@@ -27,15 +27,17 @@ public class GameManager : MonoBehaviour
     {
         if(player1.timer.zahler <= 0 && player2.timer2.zahler2 != player1.timer.zahler)
 		{
+        death.Play();
         myTextObject.text = "Player 2 Won!";
 		winPanel.SetActive(true);
 player1.timer.stop = true;
 player2.timer2.stop = true;
-//2 gewoone
+//2 gewonnen
 		}
 else if(player2.timer2.zahler2 <= 0 && player2.timer2.zahler2 != player1.timer.zahler) 
 		{
 //1 gewonnen
+        death.Play();
         myTextObject.text = "Player 1 Won!";
 		winPanel.SetActive(true);
 player2.timer2.stop = true;
