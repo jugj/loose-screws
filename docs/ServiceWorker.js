@@ -1,9 +1,9 @@
 const cacheName = "DefaultCompany-GridBased-1.0";
 const contentToCache = [
-    "Build/docs.loader.js",
-    "Build/docs.framework.js",
-    "Build/docs.data",
-    "Build/docs.wasm",
+    "Build/bb0d9ecdb05db3e84da20bd14a4f84dc.loader.js",
+    "Build/74dd24ac923f5a68dfba604b6370f41e.framework.js",
+    "Build/5893c058b04f3d27e9d502c060b849fb.data",
+    "Build/817371a3ae35412bcd1ce3651f7131eb.wasm",
     "TemplateData/style.css"
 
 ];
