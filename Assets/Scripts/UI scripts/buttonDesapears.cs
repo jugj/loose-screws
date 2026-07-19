@@ -10,6 +10,7 @@ public Button Startbutton;
 
 private void disablebutton(){
         Startbutton.gameObject.SetActive(false);
+        
     }
 
     
