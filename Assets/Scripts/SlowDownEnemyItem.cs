@@ -43,13 +43,13 @@ public class SlowDownEnemyItem : MonoBehaviour
     {
 		if(player.isPlayer == 1)
 		{
-			player.speed = 5f;
+			player.speed = 2f;
 			StartCoroutine(speedback(player));
 
 		}
 		else if  (player.isPlayer == 2) 
 		{
-			player.speed = 5f;
+			player.speed = 2f;
 			StartCoroutine(speedback(player));
 		}
         
