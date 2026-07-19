@@ -811,9 +811,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 657fb1f9c8163d284b9f887f6a7c344d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  death: {fileID: 0}
   playerNumbers:
   - {fileID: 1225151943}
   winner: 0
+  player1: {fileID: 0}
+  player2: {fileID: 0}
+  winPanel: {fileID: 0}
+  myTextObject: {fileID: 0}
 --- !u!4 &662056550
 Transform:
   m_ObjectHideFlags: 0
@@ -6479,7 +6484,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -1220838635, guid: bf2a100c38b4d8e4f9ba322ff961756d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -7678,15 +7683,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 104c7db93d44b21a98d45fbb7bcaef32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collect: {fileID: 0}
   anim: {fileID: 1078795442}
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 8
   tilemap: {fileID: 1020881078}
   destroyEffect: {fileID: 2146442985}
   spriteRenderer: {fileID: 1078795439}
   collider: {fileID: 1420056009}
   particle: {fileID: 4914055669903340571, guid: 79a0c76ede2e7d6e4b99143a49d6ff76, type: 3}
+  obstacleLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  maxItemsToSpawn: 10
+  minX: -10
+  maxX: 10
+  minY: -5
+  maxY: 5
 --- !u!1 &1466594093
 GameObject:
   m_ObjectHideFlags: 0
