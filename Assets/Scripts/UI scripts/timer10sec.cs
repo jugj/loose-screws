@@ -20,6 +20,7 @@ public class timer10sec : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        button_pressed = true;
         zahler = maxZähler;
         count1.SetzeMaxZeit(maxZähler);
     }
