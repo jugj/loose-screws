@@ -10,15 +10,15 @@ public class timer10sec2 : MonoBehaviour
     public float zahler2; 
     public bool button_pressed2 = false;
     public countAnzeige2 count2;
-    public buttonrealypressed b1;
-    public bool button_pressedR = false;
+    
     
 
 
     public void ButtonPressed(){
-        if (button_pressedR == true) {
+        
         button_pressed2 = true;
-        }
+        //GetComponent<Start>().enabled = false;
+        
     }
     // Start is called before the first frame update
     void Start()
